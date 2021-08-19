@@ -1,0 +1,14 @@
+[
+  {
+    "title": "mach",
+    "link": "https://jpedroh.github.io/mach/",
+    "subtitle": "A flight simulation tool that allows you to retrieve information from brazilian flights in a very intuitive way.",
+    "description": "Front-end built with React and TailwindCSS. Back-end implemented as a REST API built with NodeJS, ExpressJS and Sequelize. CI/CD implemented using GitHub Actions."
+  },
+  {
+    "title": "ivao-whazzup",
+    "link": "https://github.com/jpedroh/ivao-whazzup/",
+    "subtitle": "A JavaScript wrapper for IVAO's Whazzup API.",
+    "description": "Built with TypeScript as an exercise for TDD with Jest. Automatic versioning and deploy to NPM registry using Semantic Versioning and GitHub Actions."
+  }
+]

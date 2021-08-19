@@ -1,0 +1,15 @@
+.container {
+  @apply flex flex-col items-center justify-center text-center gap-3
+}
+
+.container img {
+  @apply rounded-full h-80
+}
+
+.container h1 {
+  @apply text-5xl font-light
+}
+
+.container p {
+  @apply text-2xl font-light
+}

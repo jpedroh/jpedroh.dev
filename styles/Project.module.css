@@ -1,0 +1,15 @@
+.container {
+  @apply border border-gray-300 p-5 flex flex-col gap-2 rounded-xl;
+}
+
+.container > h3 {
+  @apply text-xl
+}
+
+.container > h4 {
+  @apply text-lg
+}
+
+.container > p {
+  @apply border-l-4	border-gray-300 px-3 text-gray-600
+}

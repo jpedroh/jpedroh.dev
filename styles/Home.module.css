@@ -1,0 +1,23 @@
+.container {
+  @apply flex flex-col justify-center min-h-screen py-10 px-80 gap-4
+}
+
+.container > * {
+  @apply w-full 
+}
+
+.container a {
+  @apply text-blue-500;
+}
+
+.container a:hover {
+  @apply text-blue-800 underline;
+}
+
+.container > main > h2 {
+  @apply text-2xl	font-medium my-6;
+}
+
+.container > main > [role=list] {
+  @apply grid gap-8 grid-cols-2
+}
