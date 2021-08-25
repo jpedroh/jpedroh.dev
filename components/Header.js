@@ -10,7 +10,7 @@ const Header = () => {
       <h1>Hi there, I'm João Pedro 👋</h1>
       <p>
         Currently, a Computer Science student{" "}
-        <a href="https://www.cin.ufpe.br/" target="_blank">
+        <a href="https://www.cin.ufpe.br/" rel="noopener" target="_blank">
           @UFPE
         </a>
       </p>
