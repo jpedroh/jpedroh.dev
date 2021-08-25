@@ -1,9 +1,9 @@
 .container {
-  @apply flex flex-col justify-center min-h-screen py-10 px-80 gap-4
+  @apply flex flex-col justify-center items-center min-h-screen py-10 gap-4 
 }
 
 .container > * {
-  @apply w-full 
+  @apply sm:max-w-6xl w-11/12
 }
 
 .container a {
@@ -19,5 +19,5 @@
 }
 
 .container > main > [role=list] {
-  @apply grid gap-8 grid-cols-2
+  @apply grid gap-8 lg:grid-cols-2
 }
