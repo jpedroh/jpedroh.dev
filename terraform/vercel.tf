@@ -3,7 +3,7 @@ provider "vercel" {
 }
 
 resource "vercel_project" "jpedroh" {
-  name      = "jpedroh.dev"
+  name      = "jpedroh-dev"
   framework = "nextjs"
   git_repository = {
     production_branch = "main"
