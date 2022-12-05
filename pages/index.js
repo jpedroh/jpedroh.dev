@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Project from "../components/Project";
-import styles from "../styles/Home.module.css";
+import styles from "./index.module.css";
 
 const Home = ({ projects }) => {
   return (
