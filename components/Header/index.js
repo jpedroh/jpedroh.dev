@@ -9,7 +9,7 @@ const Header = () => {
       />
       <h1>Hi there, I'm João Pedro 👋</h1>
       <p>
-        Currently, a Software Engineering Intern{" "}
+        Currently, a Software Engineer{" "}
         <a href="https://www.cesar.org.br/en" rel="noopener" target="_blank">
           @CESAR
         </a>{" "}and a Computer Science student{" "}
