@@ -1,24 +1,23 @@
 import { Experience } from "@/components/experience";
 import { Paragraph } from "@/components/paragraph";
-import { experiences } from "../data/experiences";
+import { Header } from "@/components/header";
+import { experiences } from "@/data/experiences";
 
 export default function Home() {
   return (
     <div className="mx-auto min-h-screen max-w-screen-xl px-6 font-sans md:px-12 lg:px-24 grid grid-cols-[30rem,1fr] gap-6">
-      <header className="flex flex-col gap-6 sticky top-0 max-h-screen py-24">
-        <div className="flex flex-col gap-4">
-          <h1 className="text-zinc-100 font-bold text-5xl">
+      <Header.Root>
+        <Header.Title>
             Joao Pedro Duarte
-          </h1>
-          <h2 className="text-zinc-300 font-semibold text-2xl">
+        </Header.Title>
+        <Header.Subtitle>
             Sr Software Engineer at iFood
-          </h2>
-        </div>
-        <Paragraph className="max-w-96">
+        </Header.Subtitle>
+        <Header.Paragraph>
           A front-end engineer with a passion for building products that truly
-          impact people's life.
-        </Paragraph>
-      </header>
+          impact people&apos;s life.
+        </Header.Paragraph>
+      </Header.Root>
 
       <main className="flex flex-col gap-24 py-24">
         <section className="flex flex-col gap-4">
