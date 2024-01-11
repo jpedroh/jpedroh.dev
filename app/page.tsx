@@ -1,5 +1,6 @@
 import { Experience } from "@/components/experience";
 import { Paragraph } from "@/components/paragraph";
+import { experiences } from "../data/experiences";
 
 export default function Home() {
   return <div className="mx-auto min-h-screen max-w-screen-xl px-6 font-sans md:px-12 lg:px-24 grid grid-cols-[30rem,1fr] gap-6">
@@ -19,17 +20,11 @@ export default function Home() {
       </section>
       <section>
         <ol className="flex flex-col gap-8">
-          <Experience.Root>
-            <Experience.Period>Jun/2023 - Current</Experience.Period>
-            <Experience.Title>Sr Software Engineer - iFood</Experience.Title>
-            <Experience.Description>iFood is the largest foodtech in Latin America. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat scelerisque eros eget eleifend. Nunc nec augue sagittis, aliquet nunc in, blandit lectus. Phasellus dignissim laoreet feugiat.</Experience.Description>
-          </Experience.Root>
-
-          <Experience.Root>
-            <Experience.Period>Sep/2021 - Jan/2023</Experience.Period>
-            <Experience.Title>Sr Software Engineer - iFood</Experience.Title>
-            <Experience.Description>iFood is the largest foodtech in Latin America. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat scelerisque eros eget eleifend. Nunc nec augue sagittis, aliquet nunc in, blandit lectus. Phasellus dignissim laoreet feugiat.</Experience.Description>
-          </Experience.Root>
+          {experiences.map((experience) => <Experience.Root key={experience.title}>
+            <Experience.Period>{experience.period.from} - {experience.period.to}</Experience.Period>
+            <Experience.Title>{experience.title}</Experience.Title>
+            <Experience.Description>{experience.description}</Experience.Description>
+          </Experience.Root>)}
         </ol>
       </section>
 
