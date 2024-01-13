@@ -12,7 +12,7 @@ export const experiences: Experience[] = [
     title: "Sr Software Engineer",
     company: { name: "iFood", url: "https://institucional.ifood.com.br/en/" },
     description:
-      "Working with React, React Native, NodeJS, AWS, Terraform, Docker, Kubernetes, and more.",
+      "Architect, build, and maintain products that impact the daily operations of over 350,000 restaurants in Brazil. Also, I'm responsible for mentoring and coaching junior developers.",
     technologies: [
       "React",
       "Micro-frontends",

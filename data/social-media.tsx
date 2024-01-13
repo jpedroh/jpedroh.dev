@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import { GithubIcon } from "../icons/github";
-import { LinkedinIcon } from "../icons/linkedin";
-import { TwitterIcon } from "../icons/twitter";
+import { GithubIcon } from "../components/icons/github";
+import { LinkedinIcon } from "../components/icons/linkedin";
+import { TwitterIcon } from "../components/icons/twitter";
 
 export type SocialMediaLink = {
   name: string;
