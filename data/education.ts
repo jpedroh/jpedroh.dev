@@ -9,7 +9,7 @@ export const education: Education[] = [
     title: "MSc in Software Engineering",
     institution: { name: "CIn (UFPE)", url: "https://cin.ufpe.br" },
     description:
-      "My research is focused on code merging tools, more specifically structured and semi-structured merge tools.",
+      "My research is focused on code merging tools, more specifically structured and semi-structured tools.",
   },
   {
     title: "B.Sc. in Computer Science",

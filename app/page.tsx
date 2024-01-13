@@ -8,6 +8,11 @@ import { experiences } from "@/data/experiences";
 import { About } from "../components/about";
 import { education } from "../data/education";
 import { Education } from "../components/education";
+import { SocialMediaLink, SocialMediaList } from "../components/social-media";
+import { GithubIcon } from "../icons/github";
+import { LinkedinIcon } from "../icons/linkedin";
+import { TwitterIcon } from "../icons/twitter";
+import { socialMediasLinks } from "../data/social-media";
 
 const sections = [
   { selector: "#about", title: "About" },
@@ -30,12 +35,7 @@ export default function Home() {
 
         <Nav sections={sections} />
 
-        <ul className="text-white flex gap-2">
-          <li>Linkedin</li>
-          <li>Github</li>
-          <li>Twitter</li>
-          <li>Medium</li>
-        </ul>
+        <SocialMediaList socialMediaLinks={socialMediasLinks} />
       </Header.Root>
 
       <main className="flex flex-col gap-32 py-24">

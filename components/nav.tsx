@@ -69,7 +69,7 @@ function NavLink({
       href={href}
       className={[
         "transition-all",
-        isActive ? "text-white font-bold text-2xl" : "text-gray-500",
+        isActive ? "text-gray-50 font-bold text-2xl" : "text-gray-500",
       ].join(" ")}
     >
       {children}
