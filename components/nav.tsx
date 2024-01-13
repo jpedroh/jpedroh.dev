@@ -1,38 +1,62 @@
 "use client";
 
-import { ReactNode, useState, useEffect, MouseEventHandler } from "react";
-import { twc } from "react-twc";
+import { MouseEventHandler, ReactNode, useEffect, useState } from "react";
 
-export const Nav = twc.nav`flex flex-col gap-4`;
+type Section = {
+  selector: string;
+  title: string;
+};
 
-export function NavLink({
-  children,
-  href,
-}: {
-  children: ReactNode;
-  href: string;
-}) {
-  const [isActive, setVisible] = useState(false);
+export function Nav({ sections }: { sections: Section[] }) {
+  const [visible, setVisible] = useState(sections[0].selector);
 
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: "100px",
       threshold: 1.0,
     };
 
     const observer = new IntersectionObserver((entries) => {
       const visibleEntry = entries.find((entry) => entry.isIntersecting);
-      setVisible(visibleEntry?.target.id === href.substring(1));
+      if (visibleEntry) {
+        setVisible(visibleEntry.target.id);
+      }
     }, options);
 
-    const target = document.querySelector(href)!;
-    observer.observe(target);
-    return () => {
-      observer.unobserve(target);
-    };
-  }, [href]);
+    const targets = sections.map(
+      (section) => document.querySelector(section.selector)!,
+    );
 
+    targets.forEach((target) => observer.observe(target));
+    return () => {
+      targets.forEach((target) => observer.unobserve(target));
+    };
+  }, [sections]);
+
+  return (
+    <nav className="flex flex-col gap-4">
+      {sections.map((section) => (
+        <NavLink
+          isActive={visible === section.selector.substring(1)}
+          href={section.selector}
+          key={section.selector}
+        >
+          {section.title}
+        </NavLink>
+      ))}
+    </nav>
+  );
+}
+
+function NavLink({
+  children,
+  href,
+  isActive,
+}: {
+  children: ReactNode;
+  href: string;
+  isActive: boolean;
+}) {
   const navigateToSection: MouseEventHandler<HTMLAnchorElement> = (evt) => {
     evt.preventDefault();
     const element = document.querySelector(href)!;
@@ -42,8 +66,11 @@ export function NavLink({
   return (
     <a
       onClick={navigateToSection}
-      href="#about"
-      className={isActive ? "text-blue-500" : ""}
+      href={href}
+      className={[
+        "transition-all",
+        isActive ? "text-white font-bold text-2xl" : "text-gray-500",
+      ].join(" ")}
     >
       {children}
     </a>

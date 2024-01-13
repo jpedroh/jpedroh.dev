@@ -17,7 +17,9 @@ export function Experience({ experience }: { experience: ExperienceDto }) {
       <Styles.Period>
         {experience.period.from} - {experience.period.to}
       </Styles.Period>
-      <Styles.Title>{experience.title}</Styles.Title>
+      <Styles.Title>
+        {experience.title} - {experience.company.name}
+      </Styles.Title>
       <Styles.Description>{experience.description}</Styles.Description>
       <Styles.Technologies>
         {experience.technologies.map((technology) => (
