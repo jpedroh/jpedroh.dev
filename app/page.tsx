@@ -6,12 +6,9 @@ import { Nav } from "@/components/nav";
 import about from "@/data/about.md";
 import { experiences } from "@/data/experiences";
 import { About } from "../components/about";
-import { education } from "../data/education";
 import { Education } from "../components/education";
-import { SocialMediaLink, SocialMediaList } from "../components/social-media";
-import { GithubIcon } from "../icons/github";
-import { LinkedinIcon } from "../icons/linkedin";
-import { TwitterIcon } from "../icons/twitter";
+import { SocialMediaList } from "../components/social-media";
+import { education } from "../data/education";
 import { socialMediasLinks } from "../data/social-media";
 
 const sections = [
