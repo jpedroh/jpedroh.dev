@@ -1,43 +1,16 @@
 "use client";
 
 import { Experience } from "@/components/experience";
-import { Paragraph } from "@/components/paragraph";
 import { Header } from "@/components/header";
+import { Nav, NavLink } from "@/components/nav";
+import { Paragraph } from "@/components/paragraph";
+import about from "@/data/about.md";
 import { experiences } from "@/data/experiences";
-import { MouseEventHandler, useEffect, useState } from "react";
+import { About } from "../components/about";
 
 export default function Home() {
-  const [visible, setVisible] = useState("");
-
-  useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: "96px",
-      threshold: 1.0,
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      const visibleEntry = entries.find((entry) => entry.isIntersecting);
-      if (visibleEntry) {
-        setVisible(visibleEntry.target.id);
-      }
-
-      entries.forEach((entry) => console.log(entry));
-    }, options);
-
-    const experience = document.querySelector("#experiences")!;
-    const about = document.querySelector("#about")!;
-
-    observer.observe(experience);
-    observer.observe(about);
-    return () => {
-      observer.unobserve(experience);
-      observer.unobserve(about);
-    };
-  }, []);
-
   return (
-    <div className="mx-auto min-h-screen max-w-screen-xl px-6 font-sans md:px-12 lg:px-24 grid grid-cols-[30rem,1fr] gap-6">
+    <div className="mx-auto min-h-screen max-w-screen-xl px-6 font-sans md:px-12 lg:px-24 grid grid-cols-[30rem,1fr] gap-20">
       <Header.Root>
         <Header.Title>Joao Pedro Duarte</Header.Title>
         <Header.Subtitle>Sr Software Engineer at iFood</Header.Subtitle>
@@ -46,51 +19,23 @@ export default function Home() {
           impact people&apos;s life.
         </Header.Paragraph>
 
-        <Header.Nav.Root>
-          <Header.Nav.Link isActive={visible === "about"} href="#about">About</Header.Nav.Link>
-          <Header.Nav.Link isActive={visible === "experiences"} href="#experiences">Experiences</Header.Nav.Link>
-        </Header.Nav.Root>
+        <Nav>
+          <NavLink href="#about">About</NavLink>
+          <NavLink href="#experiences">Experiences</NavLink>
+        </Nav>
       </Header.Root>
 
-      <main className="flex flex-col gap-24 py-24">
+      <main className="flex flex-col gap-32 py-24">
         <section id="about" className="flex flex-col gap-4">
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            feugiat scelerisque eros eget eleifend. Nunc nec augue sagittis,
-            aliquet nunc in, blandit lectus. Phasellus dignissim laoreet
-            feugiat. Morbi ut velit ornare, interdum sapien vitae, feugiat
-            justo. Nam ac massa tellus. Integer ut nisl sit amet purus egestas
-            egestas id a turpis. Sed gravida vel elit id molestie.
-          </Paragraph>
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            feugiat scelerisque eros eget eleifend. Nunc nec augue sagittis,
-            aliquet nunc in, blandit lectus. Phasellus dignissim laoreet
-            feugiat. Morbi ut velit ornare, interdum sapien vitae, feugiat
-            justo. Nam ac massa tellus. Integer ut nisl sit amet purus egestas
-            egestas id a turpis. Sed gravida vel elit id molestie.
-          </Paragraph>
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            feugiat scelerisque eros eget eleifend. Nunc nec augue sagittis,
-            aliquet nunc in, blandit lectus. Phasellus dignissim laoreet
-            feugiat. Morbi ut velit ornare, interdum sapien vitae, feugiat
-            justo. Nam ac massa tellus. Integer ut nisl sit amet purus egestas
-            egestas id a turpis. Sed gravida vel elit id molestie.
-          </Paragraph>
+          <About markdownText={about} />
         </section>
+
         <section id="experiences">
-          <ol className="flex flex-col gap-8">
+          <ol className="flex flex-col gap-12">
             {experiences.map((experience) => (
-              <Experience.Root key={experience.title}>
-                <Experience.Period>
-                  {experience.period.from} - {experience.period.to}
-                </Experience.Period>
-                <Experience.Title>{experience.title}</Experience.Title>
-                <Experience.Description>
-                  {experience.description}
-                </Experience.Description>
-              </Experience.Root>
+              <li key={experience.title}>
+                <Experience experience={experience} />
+              </li>
             ))}
           </ol>
         </section>
