@@ -5,8 +5,8 @@ import { Header } from "@/components/header";
 import { Nav } from "@/components/nav";
 import about from "@/data/about.md";
 import { experiences } from "@/data/experiences";
-import { About } from "../components/about";
 import { Education } from "../components/education";
+import { Markdown } from "../components/markdown";
 import { SocialMediaList } from "../components/social-media";
 import { education } from "../data/education";
 import { socialMediasLinks } from "../data/social-media";
@@ -37,7 +37,7 @@ export default function Home() {
 
       <main className="flex flex-col gap-32 py-24">
         <section id="about" className="flex flex-col gap-4">
-          <About markdownText={about} />
+          <Markdown>{about}</Markdown>
         </section>
 
         <section id="education">

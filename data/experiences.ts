@@ -35,7 +35,7 @@ export const experiences: Experience[] = [
     title: "Internship in Software Engineer",
     company: { name: "Viitra", url: "https://viitra.com/" },
     description:
-      "I've contributed in the development of a process mining tool for the National Council of Justice using Angular. Additionally, I implemented automated integration test suites using Cypress, configured GitLab CI/CD pipelines, and conducted deployments using Docker containers.",
+      "I've contributed in the development of a process mining tool for the [National Council of Justice](https://www.cnj.jus.br/) using Angular. Additionally, I implemented automated integration test suites using Cypress, configured GitLab CI/CD pipelines, and conducted deployments using Docker containers.",
     technologies: ["Angular", "Docker", "CI/CD", "Gitlab", "Cypress"],
   },
 ];

@@ -1,12 +1,12 @@
 import { twc } from "react-twc";
 import { Experience as ExperienceDto } from "../data/experiences";
-import { Paragraph } from "./paragraph";
+import { Markdown } from "./markdown";
 
 const Styles = {
   Root: twc.div`flex flex-col`,
   Period: twc.header`text-zinc-500 text-xs font-bold uppercase mb-1`,
   Title: twc.h3`text-zinc-300 font-semibold text-xl mb-2`,
-  Description: Paragraph,
+  Description: Markdown,
   Technologies: twc.ul`flex flex-wrap gap-2 mt-2`,
   Technology: twc.li`bg-blue-800 bg-opacity-50 py-1 px-3 rounded-xl text-blue-100 text-xs`,
 };

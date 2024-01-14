@@ -68,7 +68,9 @@ function NavLink({
       onClick={navigateToSection}
       href={href}
       data-active={isActive}
-      className={"transition-all h-12 flex items-center data-[active=true]:bg-gray-50 data-[active=true]:text-gray-950 outline-none p-2 data-[active=true]:font-bold data-[active=true]:text-2xl focus-within:bg-gray-50 w-fit focus-within:text-gray-950 focus-within:font-bold focus-within:text-2xl text-gray-500"}
+      className={
+        "transition-all h-12 flex items-center data-[active=true]:bg-gray-50 data-[active=true]:text-gray-950 outline-none p-2 data-[active=true]:font-bold data-[active=true]:text-2xl focus-within:bg-gray-50 w-fit focus-within:text-gray-950 focus-within:font-bold focus-within:text-2xl text-gray-500"
+      }
     >
       {children}
     </a>
