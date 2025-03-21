@@ -1,5 +1,5 @@
 import { twc } from "react-twc";
-import { Experience as ExperienceDto } from "../data/experiences";
+import { type Experience as ExperienceDto } from "../data/experiences";
 import { Markdown } from "./markdown";
 
 const Styles = {
@@ -8,7 +8,7 @@ const Styles = {
   Title: twc.h3`text-zinc-300 font-semibold text-xl mb-2`,
   Description: Markdown,
   Technologies: twc.ul`flex flex-wrap gap-2 mt-2`,
-  Technology: twc.li`bg-blue-800 bg-opacity-50 py-1 px-3 rounded-xl text-blue-100 text-xs`,
+  Technology: twc.li`bg-blue-800/50 py-1 px-3 rounded-xl text-blue-100 text-xs`,
 };
 
 export function Experience({ experience }: { experience: ExperienceDto }) {

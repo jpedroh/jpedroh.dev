@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { GithubIcon } from "../components/icons/github";
 import { LinkedinIcon } from "../components/icons/linkedin";
 import { TwitterIcon } from "../components/icons/twitter";
