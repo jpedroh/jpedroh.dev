@@ -1,5 +1,4 @@
-import { ReactNode } from "react";
-import { SocialMediaLink } from "../data/social-media";
+import { type SocialMediaLink } from "../data/social-media";
 
 export function SocialMediaList({
   socialMediaLinks,
@@ -9,13 +8,13 @@ export function SocialMediaList({
   return (
     <ul className="flex gap-4 text-xs text-gray-200" aria-label="Social media">
       {socialMediaLinks.map((socialMediaLink) => (
-        <SocialMediaLink key={socialMediaLink.name} {...socialMediaLink} />
+        <SocialMediaLinkItem key={socialMediaLink.name} {...socialMediaLink} />
       ))}
     </ul>
   );
 }
 
-function SocialMediaLink({ href, name, icon }: SocialMediaLink) {
+function SocialMediaLinkItem({ href, name, icon }: SocialMediaLink) {
   return (
     <a
       className="block hover:text-gray-50"

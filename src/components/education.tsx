@@ -1,5 +1,5 @@
 import { twc } from "react-twc";
-import { Education as EducationDto } from "../data/education";
+import { type Education as EducationDto } from "../data/education";
 import { Paragraph } from "./paragraph";
 
 const Styles = {
