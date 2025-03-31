@@ -10,7 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@astrojs/react": "^4.2.2",
+    "@astrojs/react": "^4.2.3",
     "@astrojs/ts-plugin": "^1.10.4",
     "@tailwindcss/vite": "^4.0.17",
     "astro": "^5.5.5",
