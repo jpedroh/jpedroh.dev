@@ -10,7 +10,7 @@ test.describe('Website Functionalities', () => {
     await page.goto('http://localhost:4321');
     const navLinks = ['About', 'Education', 'Professional experience'];
     for (const linkText of navLinks) {
-      await expect(page.locator(`text=${linkText}`)).toBeVisible();
+      await expect(page.getByRole('link', { name: linkText })).toBeVisible();
     }
   });
 
@@ -22,7 +22,7 @@ test.describe('Website Functionalities', () => {
       { name: 'Twitter', url: 'https://twitter.com/eusouojotape' },
     ];
     for (const { name, url } of socialMediaLinks) {
-      const link = page.locator(`a:has-text("${name}")`);
+      const link = page.getByRole('link', { name });
       await expect(link).toHaveAttribute('href', url);
       await expect(link).toHaveAttribute('target', '_blank');
     }
