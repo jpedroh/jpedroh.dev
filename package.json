@@ -14,7 +14,7 @@
     "@astrojs/react": "^4.2.3",
     "@astrojs/ts-plugin": "^1.10.4",
     "@tailwindcss/vite": "^4.1.7",
-    "astro": "^5.7.13",
+    "astro": "^5.7.14",
     "react": "^19",
     "react-aria-components": "^1.9.0",
     "react-dom": "^19",
