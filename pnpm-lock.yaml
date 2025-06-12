@@ -76,8 +76,8 @@ importers:
         specifier: ^4.0.2
         version: 4.0.2(webpack@5.89.0)
       tailwindcss:
-        specifier: ^4.1.9
-        version: 4.1.9
+        specifier: ^4.1.10
+        version: 4.1.10
       typescript:
         specifier: ^5
         version: 5.8.3
